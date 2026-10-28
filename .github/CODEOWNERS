@@ -1,0 +1,19 @@
+# Responsables par zone du dépôt : GitHub demande automatiquement leur relecture
+# sur toute pull request qui touche leurs fichiers.
+# Remplacez les lignes commentées par les identifiants GitHub (ex. @pseudo) puis
+# retirez le « # » en début de ligne.
+
+# Bloc 1 — Application, intégration et qualité
+# *                         @pseudo-bloc1
+# app.py                    @pseudo-bloc1
+# src/logistat/ui/          @pseudo-bloc1
+# .github/                  @pseudo-bloc1
+
+# Bloc 2 — Données et analyse statistique
+# src/logistat/donnees/     @pseudo-bloc2 @pseudo-bloc1
+# src/logistat/analyse/     @pseudo-bloc2
+# data/                     @pseudo-bloc2
+
+# Bloc 3 — Modélisation prédictive et validation
+# src/logistat/modele/      @pseudo-bloc3 @pseudo-bloc1
+# modeles/                  @pseudo-bloc3

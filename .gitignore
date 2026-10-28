@@ -1,0 +1,36 @@
+# Environnements Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Outils
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Éditeurs et systèmes
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Streamlit (secrets locaux)
+.streamlit/secrets.toml
+
+# Données : le CSV d'origine (95 Mo) n'est PAS versionné (limite GitHub, et il contient
+# des champs personnels masqués). Les fichiers préparés (data/prepare, data/echantillon)
+# le sont : ils ne contiennent aucune donnée personnelle.
+data/brut/*
+!data/brut/.gitkeep
+
+# Livrables (remis sur Moodle, pas sur GitHub)
+*.pdf
+*.docx
+*.pptx

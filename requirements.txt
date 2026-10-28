@@ -1,0 +1,13 @@
+# Dépendances d'exécution de LogiStat
+# Installation : pip install -r requirements.txt
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.4   # modèles prédictifs (bloc 3)
+joblib>=1.3         # sauvegarde des modèles entraînés
+pyarrow>=15         # lecture/écriture du jeu préparé (.parquet)
+plotly>=5.20        # graphiques interactifs
+streamlit>=1.50     # interface graphique
+
+# Installe le paquet logistat lui-même (dossier src/)
+-e .
