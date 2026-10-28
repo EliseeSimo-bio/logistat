@@ -97,8 +97,14 @@ with st.sidebar:
     st.header("Filtres")
     dmin, dmax = commandes["date_commande"].min().date(), commandes["date_commande"].max().date()
     periode = st.date_input("Période de commande", (dmin, dmax), min_value=dmin, max_value=dmax)
-    marches = st.multiselect("Marché", sorted(commandes["marche"].unique()))
-    modes = st.multiselect("Mode d'expédition", sorted(commandes["mode_expedition"].unique()))
+    marches = st.multiselect(
+        "Marché", sorted(commandes["marche"].unique()), placeholder="Tous les marchés"
+    )
+    modes = st.multiselect(
+        "Mode d'expédition",
+        sorted(commandes["mode_expedition"].unique()),
+        placeholder="Tous les modes",
+    )
 
 filtre = commandes
 if isinstance(periode, tuple) and len(periode) == 2:
@@ -184,7 +190,12 @@ with onglets[3]:
     nom_perf = st.selectbox("Modèle", list(disponibles), key="modele_perf")
     modele_p = obtenir_modele(nom_perf)
     seuil = st.slider("Seuil de décision", 0.05, 0.95, 0.50, 0.05)
-    st.dataframe(decoupage.resume(), width="stretch")
+    st.dataframe(
+        decoupage.resume().style.format(
+            {"du": "{:%d/%m/%Y}", "au": "{:%d/%m/%Y}", "taux_retard": "{:.1%}", "commandes": "{:,}"}
+        ),
+        width="stretch",
+    )
     test = decoupage.test
     proba = probabilite_retard(modele_p, test)
     m = evaluer(test["en_retard"], proba, seuil)
