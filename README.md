@@ -1,6 +1,6 @@
 # LogiStat — Analyse statistique et prédiction des retards de livraison
 
-[![CI](https://github.com/ORGANISATION/logistat/actions/workflows/ci.yml/badge.svg)](https://github.com/ORGANISATION/logistat/actions/workflows/ci.yml)
+[![CI](https://github.com/EliseeSimo-bio/logistat/actions/workflows/ci.yml/badge.svg)](https://github.com/EliseeSimo-bio/logistat/actions/workflows/ci.yml)
 
 LogiStat aide un responsable d'exploitation ou un analyste de performance logistique à
 comprendre quels facteurs sont associés aux retards de livraison et à estimer la
@@ -23,7 +23,7 @@ Les données préparées sont incluses dans le dépôt : aucun téléchargement 
 Prérequis : Python 3.10 ou plus récent ([python.org](https://www.python.org/downloads/)).
 
 ```bash
-git clone https://github.com/ORGANISATION/logistat.git
+git clone https://github.com/EliseeSimo-bio/logistat.git
 cd logistat
 python -m venv .venv
 ```
